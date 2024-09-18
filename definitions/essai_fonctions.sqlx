@@ -1,0 +1,27 @@
+config {
+    type: 'view',
+    columns: dico.columns,
+    description: "Table des prestataires premium",
+    disabled:true,
+}
+
+
+${ tools.cartouche({dev: 'antoine.giraud.ext'}) }
+
+post_operations {
+
+    -- ${ tools.get_obj_name(self()) }
+    -- ${ tools.get_obj_name(ref('bidon')) }
+
+    ${tools.assert_sql({
+        obj_path: self(),
+        sql: `SELECT 1 FROM ${self()}`,
+        label: `doublon pk 🧦`,
+        est_bloquant: true
+    }) }
+
+}
+
+select 'mike' as prenom, 'mouse' as nom
+union all
+select 'duplo' as prenom, 'lego' as nom

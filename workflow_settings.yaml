@@ -1,0 +1,12 @@
+defaultProject: "homeserve-energygo"
+defaultDataset: "dev_antoine"
+defaultAssertionDataset: "cqf"
+defaultLocation: "EU"
+dataformCoreVersion: 3.0.2
+vars:
+    env: "dev"
+    projet_dl: "haiku-dl-prod"
+    projet_mi: "haiku-dev-1"
+    date_reference: "current_date('Europe/Paris') - 1"
+    datetime_reference: "datetime_trunc(current_datetime('Europe/Paris'), second)"
+    chat_webhook: "https://chat.googleapis.com/v1/spaces/xxx/messages?key=xxx&token=xxx"

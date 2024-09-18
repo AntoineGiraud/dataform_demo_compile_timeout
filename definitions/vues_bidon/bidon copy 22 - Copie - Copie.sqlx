@@ -1,0 +1,9 @@
+config {
+    type: 'view',
+    columns: dico.columns,
+    description: "Table des prestataires premium",
+}
+
+select 'mike' as prenom, 'mouse' as nom
+union all
+select 'duplo' as prenom, 'lego' as nom
